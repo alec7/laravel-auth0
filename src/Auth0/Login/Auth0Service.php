@@ -155,6 +155,11 @@ class Auth0Service
         return $this->apiuser;
     }
 
+    public function setAccessToken($accessToken)
+    {
+        $this->auth0->setAccessToken($accessToken);
+    }
+
     public function getIdToken()
     {
         return $this->getSDK()->getIdToken();
@@ -163,6 +168,11 @@ class Auth0Service
     public function getAccessToken()
     {
         return $this->getSDK()->getAccessToken();
+    }
+
+    public function getRefreshToken()
+    {
+        return $this->getSDK()->getRefreshToken();
     }
 
     public function jwtuser()
